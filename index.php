@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] === false) {
     header("Location: login.php");
 }
 
@@ -17,7 +17,14 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 </head>
 <body>
 
-<h1>Hello, <?php echo $_SESSION['username']; ?></h1>
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <h1>Hello, <?php echo $_SESSION['username']; ?></h1><br />
+        <a class="btn btn-danger" href="logout.php">Logout</a>
+    </div>
+
+</div>
+
 
 
 

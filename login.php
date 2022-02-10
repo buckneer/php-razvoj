@@ -1,5 +1,4 @@
 <?php
-session_start();
 include_once "models/User.php";
 include_once "config/Database.php";
 
@@ -47,10 +46,6 @@ if(isset($_POST['submit'])) {
             <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                 <form method="POSt">
 
-                    <div class="divider d-flex align-items-center my-4">
-                        <p class="text-center fw-bold mx-3 mb-0">Or</p>
-                    </div>
-
                     <!-- Email input -->
                     <div class="form-outline mb-4">
                         <input type="text" name="username" id="form3Example3" class="form-control form-control-lg"
@@ -70,7 +65,7 @@ if(isset($_POST['submit'])) {
                     <div class="text-center text-lg-start mt-4 pt-2">
                         <button type="button" name="submit" class="btn btn-primary btn-lg"
                                 style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
-                        <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
+                        <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="register.php"
                                                                                           class="link-danger">Register</a></p>
                     </div>
 
